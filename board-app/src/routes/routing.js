@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout";
 
 import Main from "../pages/main";
 import Profile from "../pages/profile";
+import ProfileMain from "../pages/profile/components/profile-main";
 
 // export const router = createBrowserRouter([])
 const router = createBrowserRouter([
@@ -16,6 +17,12 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+        children: [
+          {
+            path: "/profile/",
+            element: <ProfileMain />,
+          },
+        ],
       },
     ],
   },
