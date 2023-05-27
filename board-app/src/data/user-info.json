@@ -1,0 +1,8 @@
+{
+  "currUser": {
+    "uid": 1,
+    "username": "User1",
+    "email": "lorem@ipsum.com",
+    "password": "loremipsumdolorsitamet"
+  }
+}
