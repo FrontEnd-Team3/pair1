@@ -1,26 +1,22 @@
-import { useNavigate } from "react-router-dom";
+import Pagination from "./components/pagination";
+import Table from "./components/table";
+
+const POSTS_PER_PAGE = 10;
 
 const Table = ({ posts }) => {
-  const navigate = useNavigate();
+  const postSegmented = (() => {
+    const result = [];
+    while (posts.length) {
+      result.push(posts.splice(0, 10));
+    }
+  })();
+  const [paginationPage, setPaginationPage] = useState(1);
+  
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>번호</th>
-          <th>제목</th>
-          <th>글쓴이</th>
-        </tr>
-      </thead>
-      <tbody>
-        {posts.map((post) => (
-          <tr onClick={() => navigate(`/posts/${posts.id}`)}>
-            <th>{post.id}</th>
-            <th>{post.title}</th>
-            <th>{post.writer}</th>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <>
+      <Table posts={postSegmented[paginationPage - 1]} />
+      <Pagination length={postSegmented.length} />
+    </>
   );
 };
 export default Table;
