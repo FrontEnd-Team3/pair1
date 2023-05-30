@@ -17,6 +17,7 @@ const ProfileSideNav = () => {
   );
 };
 const SideNavContainer = styled.ul`
+  display: none;
   background-color: yellow;
   width: 300px;
   height: 1000px;
