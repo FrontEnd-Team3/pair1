@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const NavBar = () => {
-  return <S.Container></S.Container>;
+  return;
+  <S.Container></S.Container>;
 };
 export default NavBar;
 
