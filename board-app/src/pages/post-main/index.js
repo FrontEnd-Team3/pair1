@@ -9,7 +9,7 @@ import chatGTP from "./챗GTP.png";
 import { faker } from "@faker-js/faker";
 import data from "../../data/data.json";
 
-const Main = () => {
+const PostMain = () => {
   // const list = [];
   const IMG = [chatGTP, APPLE, Airpot, Apartment, Hand, Humanity];
   const list = data.map((onePost, index) => ({ ...onePost, IMG: IMG[index] }));
@@ -43,7 +43,7 @@ const Main = () => {
     </>
   );
 };
-export default Main;
+export default PostMain;
 
 const UL = styled.ul`
   width: 700px;

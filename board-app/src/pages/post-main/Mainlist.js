@@ -6,7 +6,7 @@ const Mainlist = ({ title, content, information, IMG, ID }) => {
     <>
       <S.List>
         <div>
-          <Link to={`/profile/${ID}`}>
+          <Link to={`/posts/${ID}`}>
             <S.H2>{title}</S.H2>
             <S.P>{content}</S.P>
             <S.Span>{information}</S.Span>

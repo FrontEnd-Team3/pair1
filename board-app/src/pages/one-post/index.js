@@ -3,23 +3,23 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
-import APPLE from "../../../main/APPLE.jpg";
-import Airpot from "../../../main/에어팟 프로.jpg";
-import Apartment from "../../../main/아파트.png";
+import APPLE from "../../pages/post-main/APPLE.jpg";
+import Airpot from "../../pages/post-main/에어팟 프로.jpg";
+import Apartment from "../../pages/post-main/아파트.png";
 import "./index.css";
-import Hand from "../../../main/손잡자.jpg";
-import Humanity from "../../../main/인류.jpg";
-import chatGTP from "../../../main/챗GTP.png";
+import Hand from "../../pages/post-main/손잡자.jpg";
+import Humanity from "../../pages/post-main/인류.jpg";
+import chatGTP from "../../pages/post-main/챗GTP.png";
 import { faker } from "@faker-js/faker";
 import { useParams } from "react-router-dom";
-import data from "../../../../data/data.json";
+import data from "../../data/data.json";
 
-const ProfileMain = () => {
+const OnePost = () => {
   const [color, setcolor] = useState(true);
 
   const [inputValue, setInputValue] = useState("");
   const [list, setList] = useState([]);
-  
+
   const { postId } = useParams();
   console.log(postId);
   const handleSubmit = (e) => {
@@ -126,7 +126,7 @@ const ProfileMain = () => {
   );
 };
 
-export default ProfileMain;
+export default OnePost;
 
 const DIV = styled.div`
   width: 80%;

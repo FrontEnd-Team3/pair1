@@ -32,6 +32,8 @@ const ProfileMain = () => {
     </ProfileContainer>
   );
 };
+// 뭔가 제가 한 거하고 조금 다르긴한데... 왜그런지는 몰라요
+//빡세게는 안햇어요! 아닙니다 ㅋㅋ
 
 const ProfileContainer = styled.div`
   display: flex;
