@@ -1,39 +1,57 @@
+import React from "react";
+import { Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const ProfileSideNav = () => {
-
   return (
-    <S.SideNavContainer>
-      <li>
-        <Link to="/profile/">회원정보</Link>
-      </li>
-      <li>
-        <Link to="/profile/edit">회원정보 수정</Link>
-      </li>
-      <li>작성한 글</li>
-      <li>댓글</li>
-      <li>보관함</li>
-    </S.SideNavContainer>
+    <SideNavContainer>
+      <StyledNav variant="pills" className="flex-column">
+        <Nav.Item>
+          <LinkContainer to="/profile/">
+            <NavLink>회원정보</NavLink>
+          </LinkContainer>
+        </Nav.Item>
+        <Nav.Item>
+          <LinkContainer to="/profile/edit">
+            <NavLink>회원정보 수정</NavLink>
+          </LinkContainer>
+        </Nav.Item>
+        <Nav.Item>작성한 글</Nav.Item>
+        <Nav.Item>댓글</Nav.Item>
+        <Nav.Item>보관함</Nav.Item>
+      </StyledNav>
+    </SideNavContainer>
   );
 };
-const SideNavContainer = styled.ul`
-  display: none;
-  background-color: yellow;
+
+const SideNavContainer = styled.div`
+  background-color: #f8f9fa;
   width: 300px;
   height: 1000px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  li {
-    padding: 15px 0 15px 10px;
+  padding: 15px;
+`;
+
+const StyledNav = styled(Nav)`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+
+const NavLink = styled(Nav.Link)`
+  && {
+    padding: 15px 0;
     text-decoration: none;
-    color: black;
+    color: #212529;
     cursor: pointer;
-  }
-  li:hover {
-    background-color: lemonchiffon;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e9ecef;
+    }
   }
 `;
-const S = { SideNavContainer };
+
 export default ProfileSideNav;
