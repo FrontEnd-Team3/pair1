@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const ProfileSideNav = () => {
-
   return (
     <S.SideNavContainer>
       <li>
@@ -24,7 +23,6 @@ const SideNavContainer = styled.ul`
   height: 1000px;
   list-style: none;
   padding: 0;
-  margin: 0;
   li {
     padding: 15px 0 15px 10px;
     text-decoration: none;

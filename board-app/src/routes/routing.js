@@ -7,6 +7,7 @@ import ProfileEdit from "../pages/profile/components/profile-edit";
 import ProfileMain from "../pages/profile/components/profile-main";
 
 // export const router = createBrowserRouter([])
+
 const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
         element: <Profile />,
         children: [
           {
-            path: "/profile/",
+            path: "/profile/:postId",
             element: <ProfileMain />,
           },
           {

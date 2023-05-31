@@ -1,5 +1,4 @@
 import styled from "styled-components";
-<<<<<<< HEAD
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,13 +11,17 @@ import Hand from "../../../main/손잡자.jpg";
 import Humanity from "../../../main/인류.jpg";
 import chatGTP from "../../../main/챗GTP.png";
 import { faker } from "@faker-js/faker";
+import { useParams } from "react-router-dom";
+import data from "../../../../data/data.json";
 
 const ProfileMain = () => {
   const [color, setcolor] = useState(true);
 
   const [inputValue, setInputValue] = useState("");
   const [list, setList] = useState([]);
-
+  
+  const { postId } = useParams();
+  console.log(postId);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue === "") return;
@@ -33,9 +36,10 @@ const ProfileMain = () => {
     updatedList.splice(index, 1);
     setList(updatedList);
   };
+
   return (
     <S.DIV>
-      <S.TITLE>제목 : 제목적는 공간</S.TITLE>
+      <S.TITLE>제목 : {data[postId - 1].title}</S.TITLE>
       <S.Container className="container">
         <Carousel className="banner">
           <Carousel.Item interval={1000}>
@@ -90,7 +94,8 @@ const ProfileMain = () => {
           </Carousel.Item>
         </Carousel>
       </S.Container>
-      <S.content>{faker.lorem.sentence({ min: 60, max: 70 })}</S.content>
+      <S.content>{data[postId - 1].content}</S.content>
+
       <BookmarkBorderIcon
         style={color ? { color: "" } : { color: "pink" }}
         onClick={() => setcolor(!color)}
@@ -103,11 +108,11 @@ const ProfileMain = () => {
       </form>
       <ul>
         <li>
-          사용자1: 예시1{" "}
+          사용자1: 예시1
           <button onClick={(e) => e.target.parentNode.remove()}>삭제</button>
         </li>
         <li>
-          사용자1: 예시2{" "}
+          사용자1: 예시2
           <button onClick={(e) => e.target.parentNode.remove()}>삭제</button>
         </li>
         {list.map((item, index) => (
@@ -118,30 +123,10 @@ const ProfileMain = () => {
         ))}
       </ul>
     </S.DIV>
-=======
-import { useUserInfo } from "../../../../context/user-info";
-
-const ProfileMain = () => {
-  const [userState, setUserState] = useUserInfo();
-  return (
-    <S.ProfileContainer>
-      <h1>프로필 정보</h1>
-      <p>닉네임: {userState.username}</p>
-      <p>이메일: {userState.email}</p>
-      <p>게시글 수: 12</p>
-      <p>추천 수: 123</p>
-    </S.ProfileContainer>
->>>>>>> origin/dev
   );
 };
-const ProfileContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 300px);
-  align-items: center;
-`;
+
 export default ProfileMain;
-<<<<<<< HEAD
 
 const DIV = styled.div`
   width: 80%;
@@ -167,6 +152,3 @@ const S = {
   content,
 };
 // bootstrap 검색 : carousel
-=======
-const S = { ProfileContainer };
->>>>>>> origin/dev

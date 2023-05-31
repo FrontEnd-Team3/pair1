@@ -8,16 +8,24 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.2",
     "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.2.3",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.2.3",
+    "eslint-plugin-react": "^7.32.2",
+    "faker": "^6.6.6",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "react-styled-components": "^0.1.11",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.10",
     "web-vitals": "^2.1.4"
   },
@@ -46,6 +54,10 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.0.1"
+    "@faker-js/faker": "^8.0.1",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unused-imports": "^2.0.0"
   }
 }
