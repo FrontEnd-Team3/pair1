@@ -138,19 +138,19 @@ const TitleWrapper = styled.div`
 const H1 = styled.h1`
   font-family: "Nanum Myeongjo", serif;
   font-size: 40px;
-  line-height: 25px;
+  /* line-height: 25px; */
 `;
 
 const H2 = styled.h2`
   font-family: "Nanum Myeongjo", serif;
   font-size: 35px;
   color: #dcdcdc;
-  line-height: 20px;
+  /* line-height: 20px; */
 `;
 
 const H22 = styled.h2`
   font-family: "Nanum Myeongjo", serif;
   font-size: 35px;
   color: #e2e2e2;
-  line-height: 17px;
+  /* line-height: 17px; */
 `;

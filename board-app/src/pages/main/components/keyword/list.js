@@ -36,6 +36,7 @@ const Div = styled.div`
   font-size: 12px;
   padding-top: 50px;
   color: #737272;
+  box-sizing: content-box;
   :hover {
     border: 1px solid #2fa599;
     color: #12887a;
