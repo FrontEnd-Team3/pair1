@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import Carousel from "react-bootstrap/Carousel";
 import APPLE from "../../pages/post-main/APPLE.jpg";
 import Airpot from "../../pages/post-main/에어팟 프로.jpg";

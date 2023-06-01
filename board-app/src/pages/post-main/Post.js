@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import Carousel from "react-bootstrap/Carousel";
 import APPLE from "../../../main/APPLE.jpg";
 import Airpot from "../../../main/에어팟 프로.jpg";
 import Apartment from "../../../main/아파트.png";
-import "./index.css";
+// import "./index.css";
 import Hand from "../../../main/손잡자.jpg";
 import Humanity from "../../../main/인류.jpg";
 import chatGTP from "../../../main/챗GTP.png";

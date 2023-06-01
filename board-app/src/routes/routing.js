@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/layout/layout";
-
 import Main from "../pages/main";
 import Profile from "../pages/profile";
 import ProfileEdit from "../pages/profile/components/profile-edit";

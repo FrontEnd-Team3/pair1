@@ -1,6 +1,7 @@
+// import { LinkContainer } from "react-router-bootstrap";
 import React from "react";
 import { Nav } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const ProfileSideNav = () => {
@@ -8,14 +9,14 @@ const ProfileSideNav = () => {
     <SideNavContainer>
       <StyledNav variant="pills" className="flex-column">
         <Nav.Item>
-          <LinkContainer to="/profile/">
+          <Link to="/profile/">
             <NavLink>회원정보</NavLink>
-          </LinkContainer>
+          </Link>
         </Nav.Item>
         <Nav.Item>
-          <LinkContainer to="/profile/edit">
+          <Link to="/profile/edit">
             <NavLink>회원정보 수정</NavLink>
-          </LinkContainer>
+          </Link>
         </Nav.Item>
         <Nav.Item>작성한 글</Nav.Item>
         <Nav.Item>댓글</Nav.Item>
