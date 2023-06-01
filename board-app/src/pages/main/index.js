@@ -25,7 +25,7 @@ const Main = () => {
         <Container ref={ref}>
           <Banner />
           <Fixbar>
-            <Menu src="img/munu-bar.png"></Menu>
+            <Menu src="img/menu-bar.png"></Menu>
             <Logo src="img/logo.png"></Logo>
             <Start onClick={handleShow}>시작하기</Start>
             <FontAwesomeIcon

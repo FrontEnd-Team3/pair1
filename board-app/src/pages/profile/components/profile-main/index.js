@@ -8,7 +8,7 @@ const ProfileMain = () => {
 
   return (
     <ProfileContainer>
-      <Container>
+      <Container style={{ backgroundColor: "white" }}>
         <ProfileHeader>프로필 정보</ProfileHeader>
         <ProfileGrid>
           <ProfileInfoItem>
@@ -38,7 +38,7 @@ const ProfileMain = () => {
 const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(100% - 300px);
+  /* width: calc(100% - 300px); */
   align-items: center;
   padding: 20px;
 `;

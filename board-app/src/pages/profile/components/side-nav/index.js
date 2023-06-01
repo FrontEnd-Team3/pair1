@@ -1,25 +1,23 @@
-// import { LinkContainer } from "react-router-bootstrap";
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const ProfileSideNav = () => {
+const SideNav = () => {
   return (
     <SideNavContainer>
       <StyledNav variant="pills" className="flex-column">
         <Nav.Item>
-          <Link to="/profile/">
-            <NavLink>회원정보</NavLink>
+          <Link to="/profile/" component={NavLink}>
+            회원정보
           </Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to="/profile/edit">
-            <NavLink>회원정보 수정</NavLink>
+          <Link to="/profile/edit" component={NavLink}>
+            회원정보 수정
           </Link>
         </Nav.Item>
         <Nav.Item>작성한 글</Nav.Item>
-        <Nav.Item>댓글</Nav.Item>
         <Nav.Item>보관함</Nav.Item>
       </StyledNav>
     </SideNavContainer>
@@ -27,7 +25,7 @@ const ProfileSideNav = () => {
 };
 
 const SideNavContainer = styled.div`
-  background-color: #f8f9fa;
+  background-color: #fafafa;
   width: 300px;
   height: 1000px;
   padding: 15px;
@@ -55,4 +53,4 @@ const NavLink = styled(Nav.Link)`
   }
 `;
 
-export default ProfileSideNav;
+export default SideNav;

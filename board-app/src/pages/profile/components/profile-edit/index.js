@@ -27,8 +27,8 @@ const ProfileEdit = () => {
 
   return (
     <ProfileForm onSubmit={validate}>
-      <Container>
-        <h1>프로필 정보</h1>
+      <Container style={{ backgroundColor: "white" }}>
+        <ProfileHeader>프로필 정보</ProfileHeader>
         <FormGroupRow>
           <FormCol xs={12} md={6}>
             <Form.Group controlId="formUsername">
@@ -77,10 +77,15 @@ const ProfileEdit = () => {
   );
 };
 
+const ProfileHeader = styled.h1`
+  margin-bottom: 20px;
+  font-size: 24px;
+`;
+
 const ProfileForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: calc(100vw - 300px);
+  /* width: calc(100vw - 300px); */
   align-items: center;
   padding: 20px;
 
