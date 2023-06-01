@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/layout/layout";
 import Main from "../pages/main";
-import Profile from "../pages/profile";
 import ProfileEdit from "../pages/profile/components/profile-edit";
 import ProfileMain from "../pages/profile/components/profile-main";
 import PostMain from "../pages/post-main";
@@ -17,20 +16,16 @@ const router = createBrowserRouter([
         path: "/",
         element: <Main />,
       },
+
       {
-        path: "/profile",
-        element: <Profile />,
-        children: [
-          {
-            path: "/profile/",
-            element: <ProfileMain />,
-          },
-          {
-            path: "/profile/edit",
-            element: <ProfileEdit />,
-          },
-        ],
+        path: "/profile/",
+        element: <ProfileMain />,
       },
+      {
+        path: "/profile/edit",
+        element: <ProfileEdit />,
+      },
+
       {
         path: "/posts",
         element: <PostMain />,

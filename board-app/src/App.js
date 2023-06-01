@@ -2,7 +2,7 @@ import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes/routing";
 import UserInfoProvider from "./context/user-info";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
