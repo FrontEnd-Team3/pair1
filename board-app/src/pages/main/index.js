@@ -126,6 +126,7 @@ const Logo = styled.img`
   right: 35px;
   bottom: 35px;
 `;
+
 const TitleWrapper = styled.div`
   width: 800px;
   height: 200px;

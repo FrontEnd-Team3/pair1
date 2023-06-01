@@ -4,9 +4,6 @@ import { LinkContainer } from "react-router-bootstrap";
 import styled from "styled-components";
 
 const ProfileSideNav = () => {
-
-
-
   return (
     <SideNavContainer>
       <StyledNav variant="pills" className="flex-column">

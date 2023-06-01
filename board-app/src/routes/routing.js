@@ -5,8 +5,11 @@ import Main from "../pages/main";
 import Profile from "../pages/profile";
 import ProfileEdit from "../pages/profile/components/profile-edit";
 import ProfileMain from "../pages/profile/components/profile-main";
+import PostMain from "../pages/post-main";
+import OnePost from "../pages/one-post";
 
 // export const router = createBrowserRouter([])
+
 const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -28,6 +31,14 @@ const router = createBrowserRouter([
             element: <ProfileEdit />,
           },
         ],
+      },
+      {
+        path: "/posts",
+        element: <PostMain />,
+      },
+      {
+        path: "/posts/:postId",
+        element: <OnePost />,
       },
     ],
   },
